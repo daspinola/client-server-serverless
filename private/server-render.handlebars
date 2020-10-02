@@ -1,0 +1,14 @@
+<div> {{ welcomeText }}. </div>
+
+<div>Serverless function server date: {{ serverlessResponse }}</div>
+
+<form action="/server-render" method="get" target="_self">
+  <input type="hidden" name="date" value="true" /> 
+  <button type="submit">Date</button>
+</form>
+
+{{#if date}}
+
+<div>It's now {{ date }}</div>
+
+{{/if}}

@@ -1,0 +1,15 @@
+service: client-server-serverless
+frameworkVersion: '2'
+provider:
+  name: aws
+  runtime: nodejs12.x
+functions:
+  serverDate:
+    handler: handler.serverDate
+    events:
+      - http:
+         path: serverDate
+         method: get
+         cors: true
+plugins:
+  - serverless-offline
